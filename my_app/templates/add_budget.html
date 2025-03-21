@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Add Budget</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+        
+        <!-- ✅ Fix: Corrected total income field -->
+        <label for="total_income">Total Income:</label>
+        {{ income_form.total_income }}
+    
+        <br><br>
+
+        <!-- Budget Items Table -->
+        <table id="budgetTable">
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Category</th>
+                    <th>Details</th>
+                    <th>Amount</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{ formset.management_form }}  <!-- Required for Django formsets -->
+                {% for form in formset %}
+                    <tr class="budget-row">
+                        <!-- ✅ Fix: Ensure "Type" dropdown is properly connected -->
+                        <td>{{ form.budget_type }}</td>
+                        <td>{{ form.category }}</td>
+                        <td>{{ form.description }}</td>
+                        <td>{{ form.amount }}</td>
+                        <td><button type="button" class="remove-row">Remove</button></td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    
+        <button type="button" id="addRow">Add Expense/Savings</button>
+        <br><br>
+    
+        <button type="submit">Save Budget</button>
+    </form>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const expenseCategories = [
+                "Housing", "Transportation", "Food & Groceries", "Personal", "Family",
+                "Health & Medical", "Entertainment & Leisure", "Shopping", "Education & Self Development",
+                "Debt, Loans & Accounts", "Gifts & Donations", "Miscellaneous & Unexpected"
+            ];
+            
+            const savingsCategories = [
+                "General", "Emergency", "Short Term Goals", "Long Term Goals",
+                "Investments & Wealth", "Miscellaneous"
+            ];
+    
+            function updateCategoryDropdown(row) {
+                const typeSelect = row.querySelector("[name*='budget_type']");
+                const categorySelect = row.querySelector("[name*='category']");
+    
+                if (!typeSelect || !categorySelect) return;
+    
+                categorySelect.innerHTML = "";  // ✅ Clear previous options
+    
+                const selectedType = typeSelect.value;
+                const categories = (selectedType === "Savings") ? savingsCategories : expenseCategories;
+    
+                // ✅ Add a default option
+                let defaultOption = document.createElement("option");
+                defaultOption.textContent = "Select Category";
+                defaultOption.value = "";
+                categorySelect.appendChild(defaultOption);
+    
+                // ✅ Populate the dropdown
+                categories.forEach(category => {
+                    let option = document.createElement("option");
+                    option.value = category;
+                    option.textContent = category;
+                    categorySelect.appendChild(option);
+                });
+    
+                categorySelect.addEventListener("change", function () {
+                    if (categorySelect.value === "") {
+                        categorySelect.setCustomValidity("Please select a category.");
+                    } else {
+                        categorySelect.setCustomValidity("");
+                    }
+                });
+            }
+    
+            // ✅ Initialize existing rows
+            document.querySelectorAll(".budget-row").forEach(updateCategoryDropdown);
+    
+            // ✅ Update category dropdown when type changes
+            document.getElementById("budgetTable").addEventListener("change", function (event) {
+                if (event.target.matches("[name*='budget_type']")) {
+                    let row = event.target.closest("tr");
+                    updateCategoryDropdown(row);
+                }
+            });
+    
+            // ✅ Add new row
+            document.getElementById("addRow").addEventListener("click", function () {
+                let table = document.getElementById("budgetTable").getElementsByTagName('tbody')[0];
+                let newRow = table.rows[0].cloneNode(true);
+    
+                // Clear all inputs in the new row
+                newRow.querySelectorAll("input, select").forEach(input => {
+                    if (input.tagName === "INPUT") {
+                        input.value = "";
+                    }
+                    if (input.tagName === "SELECT") {
+                        input.innerHTML = "";
+                    }
+                });
+    
+                table.appendChild(newRow);
+                updateCategoryDropdown(newRow);
+            });
+    
+            // ✅ Validate before submission
+            document.querySelector("form").addEventListener("submit", function (event) {
+                let valid = true;
+                document.querySelectorAll("[name*='category']").forEach(select => {
+                    if (!select.value) {
+                        valid = false;
+                    }
+                });
+                if (!valid) {
+                    event.preventDefault();
+                    alert("Please select a category for all budget items.");
+                }
+            });
+    
+            // ✅ Remove row
+            document.getElementById("budgetTable").addEventListener("click", function (event) {
+                if (event.target.classList.contains("remove-row")) {
+                    let row = event.target.closest("tr");
+                    if (document.querySelectorAll(".budget-row").length > 1) {
+                        row.remove();
+                    }
+                }
+            });
+        });
+    </script>    
+
+{% endblock %}

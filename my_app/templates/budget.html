@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>My Budget Dashboard</h2>
+
+    <!-- ✅ Budget Summary Table -->
+    <table border="1" cellpadding="5" cellspacing="0">
+        <tr>
+            <th>Total Income:</th>
+            <td>${{ total_income|floatformat:2 }}</td>
+        </tr>
+        <tr>
+            <th>Total Expenses:</th>
+            <td>${{ total_expenses|floatformat:2 }}</td>
+        </tr>
+        <tr>
+            <th>Total Savings:</th>
+            <td>${{ total_savings|floatformat:2 }}</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <!-- ✅ Pie Chart Section -->
+    {% if chart_url %}
+        <h3>Expense & Savings Breakdown</h3>
+        <img src="{{ chart_url }}" alt="Budget Pie Chart">
+    {% else %}
+        <p><em>No expenses or savings data available.</em></p>
+    {% endif %}
+
+    <br>
+
+    <!-- ✅ Add Budget Button with Styling -->
+    <a href="{% url 'add_budget' %}">
+        <button style="background-color: #4CAF50; color: white; padding: 10px 15px; border: none; cursor: pointer;">
+            Add New Budget Item
+        </button>
+    </a>
+
+{% endblock %}
