@@ -4,21 +4,27 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.forms import modelformset_factory
 
-# Signup Form
+# 🔐 Signup Form
 class SignupForm(UserCreationForm):
     class Meta:
         model = User
         fields = ["username", "email", "password1", "password2"]
 
-# ✅ Form for Total Income
+
+# 💰 Income Form
 class IncomeForm(forms.ModelForm):
-    total_income = forms.DecimalField(max_digits=10, decimal_places=2, label="Total Income")
+    total_income = forms.DecimalField(
+        max_digits=10,
+        decimal_places=2,
+        label="Total Income"
+    )
 
     class Meta:
         model = Income
         fields = ["total_income"]
 
-# ✅ Form for Individual Budget Items (Expenses/Savings)
+
+# 📋 Budget Item Form
 class BudgetItemForm(forms.ModelForm):
     BUDGET_TYPE_CHOICES = [
         ("Expense", "Expense"),
@@ -70,23 +76,37 @@ class BudgetItemForm(forms.ModelForm):
         }
 
     def __init__(self, *args, **kwargs):
-        """Ensure category list updates based on budget_type selection"""
         super().__init__(*args, **kwargs)
 
-        # ✅ Default to Expense categories if it's a new form
-        self.fields["category"].choices = self.EXPENSE_CATEGORIES
+        # Default fallback
+        selected_type = "Expense"
 
-        # ✅ Check if instance exists (for editing existing data)
-        if self.instance and self.instance.pk:
-            if self.instance.budget_type == "Savings":
-                self.fields["category"].choices = self.SAVINGS_CATEGORIES
-            else:
-                self.fields["category"].choices = self.EXPENSE_CATEGORIES
+        # ✅ 1. If POST data, prioritize that
+        if self.data:
+            selected_type = self.data.get(self.add_prefix("budget_type"), "Expense")
 
-# ✅ Use `modelformset_factory` Instead of `formset_factory`
+        # ✅ 2. If editing, use instance value
+        elif self.instance and self.instance.pk:
+            selected_type = self.instance.budget_type
+
+        # ✅ 3. Now set category choices based on correct type
+        if selected_type == "Savings":
+            self.fields["category"].choices = self.SAVINGS_CATEGORIES
+        else:
+            self.fields["category"].choices = self.EXPENSE_CATEGORIES
+
+    # Optional: Prevent saving zero amounts
+    def clean_amount(self):
+        amount = self.cleaned_data.get("amount")
+        if amount == 0:
+            raise forms.ValidationError("Amount must be greater than zero.")
+        return amount
+
+
+# 🧾 Budget Formset Factory
 BudgetItemFormSet = modelformset_factory(
-    Budget,  # ✅ Model to be used in formset
-    form=BudgetItemForm,  # ✅ Uses BudgetItemForm
+    Budget,
+    form=BudgetItemForm,
     extra=1,
     can_delete=True
 )

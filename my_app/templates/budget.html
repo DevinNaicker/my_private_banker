@@ -1,41 +1,164 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2>My Budget Dashboard</h2>
+{% with name=request.user.first_name|default:request.user.username %}
+    <h2>
+        {{ name }}{% if name|slice:"-1" == "s" %}'{% else %}'s{% endif %} Budget
+    </h2>
+{% endwith %}
 
-    <!-- ✅ Budget Summary Table -->
-    <table border="1" cellpadding="5" cellspacing="0">
-        <tr>
-            <th>Total Income:</th>
-            <td>${{ total_income|floatformat:2 }}</td>
-        </tr>
-        <tr>
-            <th>Total Expenses:</th>
-            <td>${{ total_expenses|floatformat:2 }}</td>
-        </tr>
-        <tr>
-            <th>Total Savings:</th>
-            <td>${{ total_savings|floatformat:2 }}</td>
-        </tr>
-    </table>
+    <!-- 🎨 CSS for cleaner layout and styles -->
+    <style>
+        .dashboard-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 40px;
+            margin-top: 20px;
+        }
 
-    <br>
+        .budget-table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-bottom: 30px;
+        }
 
-    <!-- ✅ Pie Chart Section -->
-    {% if chart_url %}
-        <h3>Expense & Savings Breakdown</h3>
-        <img src="{{ chart_url }}" alt="Budget Pie Chart">
-    {% else %}
-        <p><em>No expenses or savings data available.</em></p>
-    {% endif %}
+        .budget-table th, .budget-table td {
+            border: 1px solid #000;
+            padding: 8px;
+            text-align: left;
+        }
 
-    <br>
+        .col-category {
+            width: 40%;
+        }
 
-    <!-- ✅ Add Budget Button with Styling -->
-    <a href="{% url 'add_budget' %}">
-        <button style="background-color: #4CAF50; color: white; padding: 10px 15px; border: none; cursor: pointer;">
-            Add New Budget Item
-        </button>
-    </a>
+        .col-description {
+            width: 40%;
+        }
+
+        .col-amount {
+            width: 20%;
+            text-align: right;
+        }
+
+        .budget-table th {
+            background-color: #f9f9f9;
+        }
+
+        .summary-table {
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-collapse: collapse;
+        }
+
+        .summary-table td,
+        .summary-table th {
+            border: 1px solid #ccc;
+            padding: 6px 12px;
+        }
+
+        .summary-table th {
+            background-color: #f0f0f0;
+            text-align: left;
+        }
+
+        .chart-section img {
+            max-width: 300px;
+            height: auto;
+        }
+
+        .button-container {
+            margin-top: 30px;
+        }
+
+        .button-container a button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+        }
+    </style>
+
+    <!-- ✅ Budget Summary Inline -->
+    <div style="display: flex; justify-content: center; gap: 60px; margin-bottom: 30px; font-size: 1.1em;">
+        <div><strong>Total Income:</strong> ${{ total_income|floatformat:2 }}</div>
+        <div><strong>Total Expenses:</strong> ${{ total_expenses|floatformat:2 }}</div>
+        <div><strong>Total Savings:</strong> ${{ total_savings|floatformat:2 }}</div>
+    </div>
+
+    <!-- 📊 Layout Section -->
+    <div class="dashboard-container">
+        <!-- Pie Chart (Left) -->
+        <div class="chart-section">
+            {% if chart_url %}
+                <img src="{{ chart_url }}" alt="Budget Pie Chart" style="width: 850px; height: auto; max-width: 100%;">
+            {% else %}
+                <p><em>No expenses or savings data available.</em></p>
+            {% endif %}
+        </div>
+
+    <!-- Tables -->
+    <div style="flex-grow: 1;">
+        <h3>Expenses</h3>
+        <table class="budget-table">
+            <thead>
+                <tr>
+                    <th class="col-category">Category</th>
+                    <th class="col-description">Description</th>
+                    <th class="col-amount">Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in expenses %}
+                <tr>
+                    <td class="col-category">{{ item.category }}</td>
+                    <td class="col-description">{{ item.description }}</td>
+                    <td class="col-amount">${{ item.amount|floatformat:2 }}</td>
+                </tr>
+                {% endfor %}
+                <tr>
+                    <td colspan="2"><strong>Total Expenses</strong></td>
+                    <td class="col-amount"><strong>${{ total_expenses|floatformat:2 }}</strong></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Savings</h3>
+        <table class="budget-table">
+            <thead>
+                <tr>
+                    <th class="col-category">Category</th>
+                    <th class="col-description">Description</th>
+                    <th class="col-amount">Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in savings %}
+                <tr>
+                    <td class="col-category">{{ item.category }}</td>
+                    <td class="col-description">{{ item.description }}</td>
+                    <td class="col-amount">${{ item.amount|floatformat:2 }}</td>
+                </tr>
+                {% endfor %}
+                <tr>
+                    <td colspan="2"><strong>Total Savings</strong></td>
+                    <td class="col-amount"><strong>${{ total_savings|floatformat:2 }}</strong></td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- Centered Add/Edit Budget Button -->
+        <div style="text-align: center; margin-top: 20px;">
+            <a href="{% url 'add_budget' %}">
+                <button style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">
+                    Add/Edit Budget
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
 
 {% endblock %}
