@@ -107,3 +107,9 @@ If you'd like to improve **My Private Banker**, follow these steps:
    ```bash
    git push origin feature/your-feature-name
    ```
+5. **Submit a Pull Request** for review
+
+### ✅ Contribution Tips:
+- Keep your changes focused and descriptive  
+- Test your updates before submitting  
+- If you’re unsure about something, feel free to open an issue first to discuss
