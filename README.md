@@ -88,3 +88,13 @@ Then open your browser and visit `http://localhost:8000`.
 - ✅ Income and savings tracker  
 - ✅ Pie chart breakdown of expenses vs. savings  
 - ✅ User authentication and data privacy
+## 🤝 Contributing
+
+Contributions are welcome and appreciated!
+
+If you'd like to improve **My Private Banker**, follow these steps:
+
+1. **Fork** the repository  
+2. **Create a new branch** for your feature or fix:
+   ```bash
+   git checkout -b feature/your-feature-name
