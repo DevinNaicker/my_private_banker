@@ -1,5 +1,5 @@
 # 📊 My Private Banker
-![My Private](MyPrivate.png) 
+![My Private](images/MyPrivate.png) 
 
 **My Private Banker** is a personal finance web application that helps users track income, expenses, savings, and gain a visual overview of their budget. Built to be simple, intuitive, and powerful for users at any financial stage — from students learning to manage money to adults building long-term savings.
 
@@ -17,7 +17,7 @@
 
 ## 🖼️ Screenshot Of App
 
-![App Screenshot](screenshot.png)
+![App Screenshot](images/screenshot.png)
 
 *A sample user dashboard showing total income, expenses, savings, and a visual pie chart breakdown.*
 
@@ -39,7 +39,7 @@
 
 ### Inspiration
 
-![Inspiration Image](art-inspiration.jpg)
+![Inspiration Image](images/art-inspiration.jpg)
 
 While studying for my degree in Finance and Investments, I was shocked by how little the average person truly understood about managing their money. Concepts I considered fundamental — like budgeting, saving, or planning ahead — were missing from most people’s day-to-day lives.
 
@@ -54,7 +54,7 @@ A platform designed to simplify and personalize personal finance, helping everyd
 ### Tech Stack
 
 <p align="center">
-  <img src="techstack.png" alt="Tech Stack" height="600">
+  <img src="images/techstack.png" alt="Tech Stack" height="600">
 </p>
 
 #### Frontend: HTML5, CSS3, and JavaScript
@@ -78,7 +78,7 @@ These upgrades will help make My Private Banker more powerful, maintainable, and
 ### Core Algorithms
 
 <p align="center">
-  <img src="processor.png" alt="Processor">
+  <img src="images/processor.png" alt="Processor">
 </p>
 
 At the heart of **My Private Banker** is the ability to **capture, store, and intelligently use user financial planning data**. The app’s core algorithms are designed with three key goals in mind:
@@ -106,7 +106,7 @@ Together, these three steps — **input → storage → visualization** — form
 
 ### Technical Challenges and How They Were Overcome
 
-![Challenges](challenges.jpg)
+![Challenges](images/challenges.jpg)
 
 The biggest technical challenge I faced while building My Private Banker was maintaining stability while adding new features. I would often have a fully functioning app, only to see it break after introducing relatively small updates — especially in areas like form functionality and user input handling.
 
@@ -116,7 +116,7 @@ Debugging these issues became a huge time sink. Each small change would introduc
 
 ### Next Iteration
 
-![Improvement](improvement.jpg)
+![Improvement](images/improvement.jpg)
 
 I had a 2 week period create a Minimum Viable Product (MVP) as a solo developer. I built the app from scratch — combining my background in finance with my growing skills in software engineering. Due to the technical challenges faced, I was not able to implement all of the features I had wanted to due to the time constraints. 
 
