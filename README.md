@@ -51,6 +51,8 @@ I soon realized that while some people didn’t prioritize financial planning at
 That’s what inspired me to create My Private Banker —
 A platform designed to simplify and personalize personal finance, helping everyday people take control of their money, build better habits, and ultimately improve their financial well-being.
 
+<hr style="border: 0.5px solid #ccc;">
+
 ### Tech Stack
 
 <p align="center">
