@@ -116,6 +116,9 @@ If you'd like to improve **My Private Banker**, follow these steps:
 - Keep your changes focused and descriptive  
 - Test your updates before submitting  
 - If you’re unsure about something, feel free to open an issue first to discuss
+
+---
+
 ## 🔗 Related Projects
 
 - [Budget Tracker App (Example)](https://github.com/anotheruser/budget-tracker)
