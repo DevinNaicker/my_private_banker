@@ -15,7 +15,7 @@
 
 ---
 
-## 🖼️ Screenshot
+## 🖼️ Screenshot Of App
 
 ![App Screenshot](screenshot.png)
 
@@ -53,6 +53,8 @@ A platform designed to simplify and personalize personal finance, helping everyd
 
 ### Tech Stack
 
+![Tech Stack](techstack.png)
+
 #### Frontend: HTML5, CSS3, and JavaScript
 For the frontend, I chose to use plain HTML, CSS, and JavaScript without any additional frameworks. This decision was intentional - I wanted to solidify my understanding of core web development concepts like layout, styling, interactivity, and DOM manipulation. It also kept the project lightweight and easier to manage within the two-week timeline.
 
@@ -72,6 +74,8 @@ While the current version of My Private Banker was built using HTML5, CSS3, Java
 These upgrades will help make My Private Banker more powerful, maintainable, and production-ready over time.
 
 ### Core Algorithms
+
+![Processor](processor.jpg)
 
 At the heart of **My Private Banker** is the ability to **capture, store, and intelligently use user financial planning data**. The app’s core algorithms are designed with three key goals in mind:
 
@@ -98,6 +102,8 @@ Together, these three steps — **input → storage → visualization** — form
 
 ### Technical Challenges and How They Were Overcome
 
+![Challenges](challenges.jpg)
+
 The biggest technical challenge I faced while building My Private Banker was maintaining stability while adding new features. I would often have a fully functioning app, only to see it break after introducing relatively small updates — especially in areas like form functionality and user input handling.
 
 One major example was the user input forms for capturing financial data. I wanted to improve the UX by adding dropdown lists for categories, but once implemented, the form stopped saving correctly to the database. This caused a cascade of issues: the dashboard wouldn’t populate properly, and in some cases, the budget totals would double or display incorrect data.
@@ -105,6 +111,8 @@ One major example was the user input forms for capturing financial data. I wante
 Debugging these issues became a huge time sink. Each small change would introduce unpredictable bugs, making it difficult to isolate what was going wrong. To solve this, I started adding custom debugging code throughout the application — logging outputs, checking data flow step-by-step, and inspecting how user inputs were being processed. This helped me identify issues faster and also made the overall codebase more robust and easier to maintain.
 
 ### Next Iteration
+
+![Improvement](improvement.jpg)
 
 I had a 2 week period create a Minimum Viable Product (MVP) as a solo developer. I built the app from scratch — combining my background in finance with my growing skills in software engineering. Due to the technical challenges faced, I was not able to implement all of the features I had wanted to due to the time constraints. 
 
