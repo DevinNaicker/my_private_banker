@@ -101,7 +101,11 @@ One major example was the user input forms for capturing financial data. I wante
 
 Debugging these issues became a huge time sink. Each small change would introduce unpredictable bugs, making it difficult to isolate what was going wrong. To solve this, I started adding custom debugging code throughout the application — logging outputs, checking data flow step-by-step, and inspecting how user inputs were being processed. This helped me identify issues faster and also made the overall codebase more robust and easier to maintain.
 
-It was created in 2 weeks as a solo developer project and built from scratch — combining my background in finance with my growing skills in software engineering.
+### Next Iteration
+
+I had a 2 week period create a Minimum Viable Product (MVP) as a solo developer. I built the app from scratch — combining my background in finance with my growing skills in software engineering. Due to the technical challenges faced, I was not able to implement all of the features I had wanted to due to the time constraints. 
+
+In the next iterartion I would like to implement features such as money tracking, so users can see how closely they are following their budget. Goal target savings which would allow users to set savings goals and see visually the progress that they are making, calculations with timelines on future savings targets, predictions on user spending habbits, and an API so users can link bank accounts so transactions get updated in live time.
 
 ---
 
