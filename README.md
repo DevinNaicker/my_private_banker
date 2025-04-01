@@ -93,7 +93,13 @@ These visuals help users **understand and act** on their financial situation imm
 
 Together, these three steps — **input → storage → visualization** — form the foundation of My Private Banker’s intelligent budgeting experience.
 
+### Technical Challenges and How They Were Overcome
 
+The biggest technical challenge I faced while building My Private Banker was maintaining stability while adding new features. I would often have a fully functioning app, only to see it break after introducing relatively small updates — especially in areas like form functionality and user input handling.
+
+One major example was the user input forms for capturing financial data. I wanted to improve the UX by adding dropdown lists for categories, but once implemented, the form stopped saving correctly to the database. This caused a cascade of issues: the dashboard wouldn’t populate properly, and in some cases, the budget totals would double or display incorrect data.
+
+Debugging these issues became a huge time sink. Each small change would introduce unpredictable bugs, making it difficult to isolate what was going wrong. To solve this, I started adding custom debugging code throughout the application — logging outputs, checking data flow step-by-step, and inspecting how user inputs were being processed. This helped me identify issues faster and also made the overall codebase more robust and easier to maintain.
 
 It was created in 2 weeks as a solo developer project and built from scratch — combining my background in finance with my growing skills in software engineering.
 
