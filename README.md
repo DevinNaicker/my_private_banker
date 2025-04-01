@@ -88,6 +88,9 @@ Then open your browser and visit `http://localhost:8000`.
 - ✅ Income and savings tracker  
 - ✅ Pie chart breakdown of expenses vs. savings  
 - ✅ User authentication and data privacy
+
+---
+
 ## 🤝 Contributing
 
 Contributions are welcome and appreciated!
