@@ -98,3 +98,12 @@ If you'd like to improve **My Private Banker**, follow these steps:
 2. **Create a new branch** for your feature or fix:
    ```bash
    git checkout -b feature/your-feature-name
+   ```
+3. **Make your changes** and commit them:
+   ```bash
+   git commit -m "Add your message here"
+   ```
+4. **Push to your fork:
+   ```bash
+   git push origin feature/your-feature-name
+   ```
