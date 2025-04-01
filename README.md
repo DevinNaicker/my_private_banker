@@ -53,7 +53,9 @@ A platform designed to simplify and personalize personal finance, helping everyd
 
 ### Tech Stack
 
-![Tech Stack](techstack.png)
+<p align="center">
+  <img src="techstack.png" alt="Tech Stack" height="650">
+</p>
 
 #### Frontend: HTML5, CSS3, and JavaScript
 For the frontend, I chose to use plain HTML, CSS, and JavaScript without any additional frameworks. This decision was intentional - I wanted to solidify my understanding of core web development concepts like layout, styling, interactivity, and DOM manipulation. It also kept the project lightweight and easier to manage within the two-week timeline.
