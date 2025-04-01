@@ -68,6 +68,33 @@ While the current version of My Private Banker was built using HTML5, CSS3, Java
 
 These upgrades will help make My Private Banker more powerful, maintainable, and production-ready over time.
 
+### Core Algorithms
+
+At the heart of **My Private Banker** is the ability to **capture, store, and intelligently use user financial planning data**. The app’s core algorithms are designed with three key goals in mind:
+
+#### 1. Data Input Simplicity  
+The user experience must make inputting financial information feel effortless. The design of the budget form (`add_budget.html`) includes dynamic behaviors like smart dropdowns, category filtering, and inline row addition — making it as seamless as possible for users to record their financial activity.
+
+#### 2. Data Structure & Storage  
+Each user’s financial data is stored in a structured, **relational format**. This allows for:
+- Accurate tracking of income, expenses, and savings
+- Flexible querying and filtering by type, category, or timeframe
+- Scalable storage across multiple users with personalized records
+
+By storing data cleanly, the app enables rich insights and future expansion (like trend analysis or forecasting).
+
+#### 3. Visual Clarity  
+Once the data is captured and structured, the final step is presenting it back to users in a **visually intuitive** way. This includes:
+- A dashboard summary with income, expenses, and savings totals
+- A pie chart to quickly identify how money is being allocated
+- Category-based breakdowns for deeper insights
+
+These visuals help users **understand and act** on their financial situation immediately.
+
+---
+
+Together, these three steps — **input → storage → visualization** — form the foundation of My Private Banker’s intelligent budgeting experience.
+
 
 
 It was created in 2 weeks as a solo developer project and built from scratch — combining my background in finance with my growing skills in software engineering.
