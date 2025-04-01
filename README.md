@@ -78,7 +78,7 @@ These upgrades will help make My Private Banker more powerful, maintainable, and
 ### Core Algorithms
 
 <p align="center">
-  <img src="processor.png" alt="Processor" width="1050" height="600">
+  <img src="processor.png" alt="Processor">
 </p>
 
 At the heart of **My Private Banker** is the ability to **capture, store, and intelligently use user financial planning data**. The app’s core algorithms are designed with three key goals in mind:
