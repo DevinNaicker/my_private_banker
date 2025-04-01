@@ -54,7 +54,7 @@ A platform designed to simplify and personalize personal finance, helping everyd
 ### Tech Stack
 
 <p align="center">
-  <img src="techstack.png" alt="Tech Stack" height="650">
+  <img src="techstack.png" alt="Tech Stack" height="600">
 </p>
 
 #### Frontend: HTML5, CSS3, and JavaScript
