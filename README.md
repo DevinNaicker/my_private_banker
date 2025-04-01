@@ -36,7 +36,17 @@
 
 ## 🧠 About
 
-While studying Finance & Investments, I realized many people — including those in professional finance roles — lacked access to accessible tools that encouraged good money habits. That inspired me to create **My Private Banker**: a budgeting and savings tracker designed to be personal, user-friendly, and built with real people in mind.
+### Inspiration
+
+While studying for my degree in Finance and Investments, I was shocked by how little the average person truly understood about managing their money. Concepts I considered fundamental — like budgeting, saving, or planning ahead — were missing from most people’s day-to-day lives.
+
+What surprised me even more was who struggled:
+Not just students or low-income earners, but also older adults who seemed financially comfortable, graduates with well-paying jobs, and even colleagues at the financial institution where I worked. It became clear to me that financial literacy and good money habits were not as common as I had assumed.
+
+I soon realized that while some people didn’t prioritize financial planning at all, many did — but simply didn’t have accessible tools to help them budget, track spending, or plan for the future. The tools that did exist were often too complex, too impersonal, or simply not built with real people in mind.
+
+That’s what inspired me to create My Private Banker —
+A platform designed to simplify and personalize personal finance, helping everyday people take control of their money, build better habits, and ultimately improve their financial well-being.
 
 It was created in 2 weeks as a solo developer project and built from scratch — combining my background in finance with my growing skills in software engineering.
 
