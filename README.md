@@ -91,8 +91,6 @@ Once the data is captured and structured, the final step is presenting it back t
 
 These visuals help users **understand and act** on their financial situation immediately.
 
----
-
 Together, these three steps — **input → storage → visualization** — form the foundation of My Private Banker’s intelligent budgeting experience.
 
 
