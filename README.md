@@ -38,6 +38,8 @@
 
 ### Inspiration
 
+![Inspiration Image](art-inspiration.jpg)
+
 While studying for my degree in Finance and Investments, I was shocked by how little the average person truly understood about managing their money. Concepts I considered fundamental — like budgeting, saving, or planning ahead — were missing from most people’s day-to-day lives.
 
 What surprised me even more was who struggled:
