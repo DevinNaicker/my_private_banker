@@ -1,4 +1,5 @@
 # 📊 My Private Banker
+![My Private](MyPrivate.png) 
 
 **My Private Banker** is a personal finance web application that helps users track income, expenses, savings, and gain a visual overview of their budget. Built to be simple, intuitive, and powerful for users at any financial stage — from students learning to manage money to adults building long-term savings.
 
