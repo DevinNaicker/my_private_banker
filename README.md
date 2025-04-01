@@ -70,3 +70,21 @@ python manage.py migrate
 
 # Start the development server
 python manage.py runserver
+```
+Then open your browser and visit `http://localhost:8000`.
+
+---
+
+## 💡 Usage
+
+1. **Sign up or log in**
+2. **Enter your total monthly income**
+3. **Add your expenses and savings using the form**
+4. **Get an instant breakdown with summaries and a pie chart**
+5. **Edit or delete items anytime**
+
+### Key Features:
+- ✅ Budget builder with category tagging  
+- ✅ Income and savings tracker  
+- ✅ Pie chart breakdown of expenses vs. savings  
+- ✅ User authentication and data privacy
