@@ -121,8 +121,8 @@ If you'd like to improve **My Private Banker**, follow these steps:
 
 ## 🔗 Related Projects
 
-- [Budget Tracker App (Example)](https://github.com/anotheruser/budget-tracker)
-- [Awesome Personal Finance Tools](https://github.com/matiassingers/awesome-readme)
+- [Actual App (Example)](https://github.com/actualbudget/actual)
+- [YNAB](https://www.ynab.com/)
 
 ---
 
