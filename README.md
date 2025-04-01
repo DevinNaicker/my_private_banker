@@ -6,11 +6,11 @@
 
 ## 🚀 Live Demo
 
-🔗 [Visit the Live App](https://your-deployed-url.com)
+🔗 [Visit the Landing Page](https://myprivatebanker.carrd.co/)
 
-📖 [Read the Final Project Blog](https://your-blog-url.com)
+📖 [Read the Final Project Blog](https://www.linkedin.com/posts/devin-naicker-659711a4_an-article-on-my-experiences-creating-my-activity-7312845546883313666-8lfz?utm_source=share&utm_medium=member_desktop&rcm=ACoAABYsr2UBrRULCmvPcxQ_NimYOu8O2Btj_fM)
 
-👤 **Author**: [Thirushan Devin Naicker](https://www.linkedin.com/in/your-linkedin-url)
+👤 **Author**: [Thirushan Devin Naicker](https://www.linkedin.com/in/devin-naicker-659711a4)
 
 ---
 
@@ -44,7 +44,7 @@ It was created in 2 weeks as a solo developer project and built from scratch —
 
 ## 🛠️ Installation (for Developers)
 
-> ⚠️ You do **not** need to install anything if you're using the [live site](https://your-deployed-url.com).  
+> ⚠️ You do **not** need to install anything if you're using the [live site].  
 > This section is for developers who want to run the app locally or contribute.
 
 ### Prerequisites:
