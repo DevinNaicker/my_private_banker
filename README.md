@@ -77,6 +77,8 @@ While the current version of My Private Banker was built using HTML5, CSS3, Java
 
 These upgrades will help make My Private Banker more powerful, maintainable, and production-ready over time.
 
+##
+
 ### Core Algorithms
 
 <p align="center">
@@ -106,6 +108,8 @@ These visuals help users **understand and act** on their financial situation imm
 
 Together, these three steps — **input → storage → visualization** — form the foundation of My Private Banker’s intelligent budgeting experience.
 
+##
+
 ### Technical Challenges and How They Were Overcome
 
 ![Challenges](images/challenges.jpg)
@@ -115,6 +119,8 @@ The biggest technical challenge I faced while building My Private Banker was mai
 One major example was the user input forms for capturing financial data. I wanted to improve the UX by adding dropdown lists for categories, but once implemented, the form stopped saving correctly to the database. This caused a cascade of issues: the dashboard wouldn’t populate properly, and in some cases, the budget totals would double or display incorrect data.
 
 Debugging these issues became a huge time sink. Each small change would introduce unpredictable bugs, making it difficult to isolate what was going wrong. To solve this, I started adding custom debugging code throughout the application — logging outputs, checking data flow step-by-step, and inspecting how user inputs were being processed. This helped me identify issues faster and also made the overall codebase more robust and easier to maintain.
+
+##
 
 ### Next Iteration
 
