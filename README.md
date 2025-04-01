@@ -48,6 +48,28 @@ I soon realized that while some people didn’t prioritize financial planning at
 That’s what inspired me to create My Private Banker —
 A platform designed to simplify and personalize personal finance, helping everyday people take control of their money, build better habits, and ultimately improve their financial well-being.
 
+### Tech Stack
+
+#### Frontend: HTML5, CSS3, and JavaScript
+For the frontend, I chose to use plain HTML, CSS, and JavaScript without any additional frameworks. This decision was intentional - I wanted to solidify my understanding of core web development concepts like layout, styling, interactivity, and DOM manipulation. It also kept the project lightweight and easier to manage within the two-week timeline.
+
+#### Backend: Django
+I used Django to handle backend logic, form processing, data validation, and database interactions. Django’s built-in features, such as the admin panel and user authentication, helped me build secure and structured backend functionality quickly.
+
+#### Database: SQLite
+I chose SQLite during development due to its simplicity and seamless integration with Django. It allowed me to focus on feature development without the overhead of setting up an external database service.
+
+#### Planned Improvements & Scaling
+While the current version of My Private Banker was built using HTML5, CSS3, JavaScript, and Django with SQLite, I’m actively planning to scale and modernize the tech stack as the app grows.
+
+- I intend to migrate the frontend to React, allowing for more dynamic, component-based UI development and better scalability as features expand.
+- For the database, I plan to transition from SQLite to PostgreSQL to support more robust relational data handling, improved performance under load, and smoother deployment.
+- Finally, I aim to host the application on AWS, leveraging its scalability, reliability, and deployment flexibility — especially as I continue to develop features and prepare for potential multi-user    support.
+
+These upgrades will help make My Private Banker more powerful, maintainable, and production-ready over time.
+
+
+
 It was created in 2 weeks as a solo developer project and built from scratch — combining my background in finance with my growing skills in software engineering.
 
 ---
