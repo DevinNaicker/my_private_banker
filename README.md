@@ -113,3 +113,14 @@ If you'd like to improve **My Private Banker**, follow these steps:
 - Keep your changes focused and descriptive  
 - Test your updates before submitting  
 - If you’re unsure about something, feel free to open an issue first to discuss
+## 🔗 Related Projects
+
+- [Budget Tracker App (Example)](https://github.com/anotheruser/budget-tracker)
+- [Awesome Personal Finance Tools](https://github.com/matiassingers/awesome-readme)
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.  
+See the [LICENSE](LICENSE) file for more information.
