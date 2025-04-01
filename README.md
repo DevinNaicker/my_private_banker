@@ -16,7 +16,7 @@
 
 ## 🖼️ Screenshot
 
-![My Private Banker Dashboard](https://your-image-url.com/dashboard-screenshot.png)
+![App Screenshot](screenshot.png)
 
 *A sample user dashboard showing total income, expenses, savings, and a visual pie chart breakdown.*
 
