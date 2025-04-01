@@ -8,7 +8,7 @@
 
 🔗 [Visit the Landing Page](https://myprivatebanker.carrd.co/)
 
-📖 [Read the Final Project Blog](https://www.linkedin.com/posts/devin-naicker-659711a4_an-article-on-my-experiences-creating-my-activity-7312845546883313666-8lfz?utm_source=share&utm_medium=member_desktop&rcm=ACoAABYsr2UBrRULCmvPcxQ_NimYOu8O2Btj_fM)
+📖 [Read the Final Project Blog](https://www.linkedin.com/pulse/making-my-first-app-private-banker-devin-naicker-6jg5f)
 
 👤 **Author**: [Thirushan Devin Naicker](https://www.linkedin.com/in/devin-naicker-659711a4)
 
